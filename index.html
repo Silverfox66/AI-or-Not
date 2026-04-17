@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI or Not</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="card">
+      <p class="eyebrow">Chance-based checker</p>
+      <h1>AI or Not</h1>
+      <p class="intro">
+        Paste in any text, press submit, and get a completely random percentage
+        from 1% to 100%.
+      </p>
+
+      <form id="detector-form" class="detector-form">
+        <label for="essay-input">Enter text</label>
+        <textarea
+          id="essay-input"
+          name="essay"
+          rows="10"
+          placeholder="Paste your essay, paragraph, or sentence here..."
+          required
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+
+      <section class="result-panel" aria-live="polite">
+        <p class="result-label">Result</p>
+        <p id="result-text" class="result-text">Waiting for submission...</p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="disclaimer">
+    DISCLAIMER: This does not actually detect whether or not your essay was created using AI
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
